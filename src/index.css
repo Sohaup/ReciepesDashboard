@@ -1,3 +1,15 @@
 @import "tailwindcss";
 @import "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+
+.cool-bg-img {
+    background-image: linear-gradient(to right ,rgba(0 , 0 , 0 , .6) , rgba(0 , 0 , 0 , .6)) , url("./assets/mainLayout/coolBg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@layer components {
+    .side-bar-links-hover {
+        @apply hover:text-rose-800 hover:translate-x-2 transition-all duration-500 font-bold;
+    }
+}
