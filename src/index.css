@@ -8,8 +8,35 @@
     background-size: cover;
 }
 
+.red-cool-bg-img {
+    background-image: linear-gradient(to right ,rgba(0 , 0 , 0 , .6) , rgba(0 , 0 , 0 , .6)) , url("./assets/mainBoard/redCoolBg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 @layer components {
     .side-bar-links-hover {
         @apply hover:text-rose-800 hover:translate-x-2 transition-all duration-500 font-bold;
+    }
+    .card {
+        @apply flex flex-col gap-3 bg-white transition-colors duration-500 hover:bg-linear-to-l hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 hover:text-white ;
+    }
+    .card-head {
+        @apply flex justify-between;
+    }
+    .card .card-head h2 {
+        @apply text-2xl font-semibold;
+    }
+    .card-head span {
+        @apply w-8 h-8 rounded-full flex justify-center items-center bg-white text-black border -rotate-45 ; 
+    }
+    .card-body p {
+        @apply text-5xl font-bold;
+    }
+    .card-foot {
+        @apply text-sm text-yellow-400 font-sans font-semibold;
+    }
+    .bg-gredient {
+        @apply bg-linear-to-l from-yellow-600 via-yellow-700 to-yellow-800 text-white;
     }
 }

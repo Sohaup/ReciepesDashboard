@@ -1,4 +1,4 @@
-import mainIcon from "../../../public/icon.png";
+import mainIcon from "../../assets/mainLayout/icon.png";
 import {PanelTopBottomDashed , ClipboardList, ChartPie, Calendar, Settings, Moon} from "lucide-react"
 import { Button } from "flowbite-react";
 import { useLocation , Link } from "react-router-dom";
@@ -11,7 +11,7 @@ export default function SideBar() {
         
     }, [])
   return (
-    <div className="sidebar flex flex-col gap-30 bg-slate-100 rounded-lg p-8">
+    <div className="sidebar hidden lg:flex flex-col gap-30 bg-slate-100 rounded-lg px-8 py-16">
         <div className="head flex flex-col gap-2 items-center ">
             <img src={mainIcon} alt="main icon" className="w-15 h-15 rounded-full " />
             <h1 className="text-2xl font-bold text-yellow-700">Recipes </h1>
