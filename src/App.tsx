@@ -1,11 +1,12 @@
 import './App.css'
 import {createBrowserRouter , RouterProvider } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout/MainLayout'
+import MainBoard from './components/MainBoard/MainBoard'
 
 
 const routes = createBrowserRouter([{
   path:"/" ,
-  element:<MainLayout><h1>Index</h1></MainLayout>
+  element:<MainLayout><MainBoard/></MainLayout>
 }])
 function App() {
  

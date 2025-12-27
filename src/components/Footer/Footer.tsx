@@ -1,4 +1,4 @@
-import mainLogoImg from "../../../public/icon.png"
+import mainLogoImg from "../../assets/mainLayout/icon.png"
 
 export default function Footer() {
   return (
