@@ -9,7 +9,6 @@ const routes = createBrowserRouter([{
   element:<MainLayout><MainBoard/></MainLayout>
 }])
 function App() {
- 
 
   return (
    <RouterProvider router={routes}/>
