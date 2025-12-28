@@ -8,7 +8,7 @@ export default function MainLayout({children}:{children:React.ReactNode}) {
   return (
     <div className="flex gap-2 m-5">
         <div className="side">
-            <SideBar/>
+            <SideBar className="hidden"/>
         </div>
         <div className="main w-full">
             <Header/>
