@@ -2,7 +2,7 @@ import mainLogoImg from "../../assets/mainLayout/icon.png"
 
 export default function Footer() {
   return (
-   <footer className="bg-slate-100 w-full rounded-xl p-5 flex justify-between items-center ">
+   <footer className="bg-slate-100 w-full rounded-xl p-5 flex justify-between items-center md:absolute md:bottom-5 ">
     <div className="img">
         <img src={mainLogoImg} alt="main logo"  className="w-20 h-20 rounded-full"/>
     </div>
