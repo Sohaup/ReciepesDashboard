@@ -1,5 +1,5 @@
 import mainIcon from "../../assets/mainLayout/icon.png";
-import {PanelTopBottomDashed , ClipboardList, ChartPie, Calendar, Settings, Moon} from "lucide-react"
+import {PanelTopBottomDashed , ClipboardList, ChartPie, Calendar, Settings, Cloud} from "lucide-react"
 import { Button } from "flowbite-react";
 import { useLocation , Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -11,10 +11,23 @@ export default function SideBar({className=""}:{className:string}) {
         
     }, [])
   return (
-    <div className={`sidebar  lg:flex flex-col gap-30 bg-slate-100 rounded-lg px-8 py-16 ${className}`}>
-        <div className="head flex flex-col gap-2 items-center ">
-            <img src={mainIcon} alt="main icon" className="w-15 h-15 rounded-full " />
-            <h1 className="text-2xl font-bold text-yellow-700">Recipes </h1>
+    <div className={`sidebar relative lg:flex flex-col gap-20  bg-slate-100 rounded-xl p-8 ${className}`}>
+        <div className="head flex  gap-2 items-center border-b border-b-slate-300 pb-3 ">
+            <div className="img bg-white w-18 h-18 p-3 rounded-full flex justify-center items-center">
+                <img src={mainIcon} alt="main icon" className="w-15 h-15 rounded-full " />
+            </div>
+            <div className="texts">
+                <h1 className="text-2xl font-bold text-yellow-700">Recipes </h1>
+                <p className="flex gap-2">
+                    <span className="text-slate-600">
+                        <Cloud/>
+                    </span>
+                    <span className="text-slate-600">
+                        Private
+                    </span>
+                </p>
+            </div>
+            
         </div>
         <ul className="menu flex flex-col gap-6 my-2">
             <h2 className="text-slate-600 text-sm uppercase text-center">menu</h2>
@@ -38,13 +51,10 @@ export default function SideBar({className=""}:{className:string}) {
                 <span><Settings/></span>
                 <Link to={"/settings"}>Settings</Link>
             </li>
-            <li className="flex gap-1">
-                <span><Moon/></span>
-                <p>Dark Mode</p>
-            </li>
+           
         </ul>
 
-        <div className="card cool-bg-img rounded-xl flex flex-col items-center justify-center gap-2 p-3">  
+        <div className="card mt-auto cool-bg-img rounded-xl flex flex-col items-center justify-center gap-2 p-3">  
             <span className="bg-white w-8 h-8 flex items-center justify-center rounded-full self-start">
                  <img src={mainIcon} className="w-6 h-6 rounded-full"/>
             </span>         
