@@ -45,4 +45,8 @@
     .rounded-icon {
         @apply w-12 h-12 p-3 rounded-full flex justify-center items-center;
     }
+    .font-inter {
+        font-family: "Inter" , sans-serif;
+        text-transform: uppercase;
+    }
 }
