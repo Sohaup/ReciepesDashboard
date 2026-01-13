@@ -2,7 +2,7 @@ import {createSlice , createAsyncThunk} from '@reduxjs/toolkit'
 import { getMealRecipes } from '../../api/recipeApi';
 import type { recipeSliceStateType, recipeType } from '../../types/recipeTypes';
 
-export const getRecipes = createAsyncThunk('recipes/get' , async (meal:string )=> {getMealRecipes(meal , initialState.apiKey )});
+export const getRecipes = createAsyncThunk('recipes/get' , async (meal:string )=> {return getMealRecipes(meal , initialState.apiKey )});
 const initialState:recipeSliceStateType = {
     recipes:[] ,
     isLoading:false ,
@@ -27,7 +27,7 @@ const recipeSlice = createSlice({
         builder.addCase(getRecipes.fulfilled , (prevState , action)=> {
             prevState.isLoading = false;
             prevState.isError = false;
-            prevState.recipes =  action.payload;
+            prevState.recipes =  action.payload;           
         })
     }
 });

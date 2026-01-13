@@ -11,7 +11,7 @@ export default function SideBar({className=""}:{className:string}) {
         
     }, [])
   return (
-    <div className={`sidebar relative lg:flex flex-col gap-20  bg-slate-100 rounded-xl p-8 ${className}`}>
+    <div className={`sidebar  relative lg:flex flex-col gap-20  bg-slate-100 rounded-xl p-8 ${className}`}>
         <div className="head flex  gap-2 items-center border-b border-b-slate-300 pb-3 ">
             <div className="img bg-white w-18 h-18 p-3 rounded-full flex justify-center items-center">
                 <img src={mainIcon} alt="main icon" className="w-15 h-15 rounded-full " />
